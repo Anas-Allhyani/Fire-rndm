@@ -431,9 +431,7 @@ class Main:
 		
 		
 		print("")
-		print("\033[1;3
-
-7m [1] FOLLOW THIS ACCOUNT   ")
+		print("\033[1;37m [1] Start Cracking  ")
 		print("\033[1;37m [2] Exit tool")
 		print("")
 		Baloch = input("\n\033[1;37m  Choose : \033[1;32m")
